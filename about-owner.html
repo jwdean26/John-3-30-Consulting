@@ -23,6 +23,10 @@
           <li><a href="about-owner.html" aria-current="page">About the Owner</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
+        <button id="theme-toggle" class="theme-toggle" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">🌙</span>
+          <span class="theme-label">Toggle dark mode</span>
+        </button>
       </nav>
     </div>
   </header>
@@ -95,6 +99,33 @@
         yearSpan.textContent = new Date().getFullYear();
       }
     })();
+  </script>
+  <script>
+  (function () {
+    const toggle = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+    const icon = toggle.querySelector('.theme-icon');
+
+    // Detect system preference
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Load saved preference OR fall back to system preference
+    const savedTheme = localStorage.getItem('theme');
+    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+    if (initialTheme === 'dark') {
+      root.classList.add('dark-mode');
+      toggle.setAttribute('aria-pressed', 'true');
+      icon.textContent = '🌞'; // sun icon for dark mode
+    }
+
+    toggle.addEventListener('click', function () {
+      const isDark = root.classList.toggle('dark-mode');
+      toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      icon.textContent = isDark ? '🌞' : '🌙';
+    });
+  })();
   </script>
 </body>
 </html>
