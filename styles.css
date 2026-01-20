@@ -241,6 +241,13 @@ textarea:focus-visible {
 :root.dark-mode .site-nav a {
   color: #000000;
 }
+:root.dark-mode .theme-toggle {
+  border-color: #000000; /* black border */
+  color: #000000;        /* black text */
+}
+:root.dark-mode .theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
 
 /* Dark mode toggle button */
 .theme-toggle {
