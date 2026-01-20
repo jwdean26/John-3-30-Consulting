@@ -256,3 +256,14 @@ textarea:focus-visible {
 .theme-toggle:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.theme-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
