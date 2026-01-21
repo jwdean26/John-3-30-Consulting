@@ -58,8 +58,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-wrap: nowrap; /* prevents logo from dropping below */
 }
 
 /* Keep all left-side elements stacked neatly */
