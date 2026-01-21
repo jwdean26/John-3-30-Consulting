@@ -68,6 +68,10 @@ body {
   gap: 0.5rem;
 }
 
+.site-logo {
+  flex-shrink: 0;
+}
+
 /* Logo sizing */
 .logo-image {
   height: 240px;   /* adjust as needed */
