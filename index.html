@@ -11,30 +11,37 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
-  <div class="container header-flex">
+  <div class="container header-layout">
 
-    <div class="header-text">
+    <!-- LEFT SIDE: title, tagline, nav, toggle -->
+    <div class="header-left">
       <h1 class="site-title">John 3:30 Consulting, LLC</h1>
       <p class="site-tagline">Empowering people through accessible technology</p>
+
       <nav class="site-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
           <li><a href="about-owner.html">About the Owner</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
-        <button id="theme-toggle" class="theme-toggle" aria-pressed="false">
-          <span class="theme-icon" aria-hidden="true">🌙</span>
-          <span class="theme-label">Toggle dark mode</span>
-        </button>
       </nav>
-      <a href="index.html" class="site-logo">
-        <img src="images/john330consultinglogo.png"
-             alt="John 3:30 Consulting logo"
-             class="logo-image">
-      </a>
+
+      <button id="theme-toggle" class="theme-toggle" aria-pressed="false">
+        <span class="theme-icon" aria-hidden="true">🌙</span>
+        <span class="theme-label">Toggle dark mode</span>
+      </button>
     </div>
-  </header>
+
+    <!-- RIGHT SIDE: logo -->
+    <a href="index.html" class="site-logo">
+      <img src="images/john330consultinglogo.png"
+           alt="John 3:30 Consulting logo"
+           class="logo-image">
+    </a>
+
+  </div>
+</header>
 
   <main id="main-content">
     <section id="about" class="section">
