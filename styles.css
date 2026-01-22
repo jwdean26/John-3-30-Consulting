@@ -298,6 +298,10 @@ html.dark-mode .site-nav a {
   color: #000000;
 }
 
+html.dark-mode .owner-photo figcaption {
+  color: #000000;
+}
+
 html.dark-mode .theme-toggle {
   border-color: #000000; /* black border */
   color: #000000;        /* black text */
