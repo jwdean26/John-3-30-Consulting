@@ -299,7 +299,7 @@ html.dark-mode .site-nav a {
 }
 
 html.dark-mode .owner-photo figcaption {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 html.dark-mode .theme-toggle {
