@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resources - John 3:30 Consulting, LLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Helpful Assistive Technology and Accessibility-related resources courtesy of John 3:30 Consulting, LLC.">
+  <link rel="stylesheet" href="styles.css">
+</head>
 
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+  <div class="container header-layout">
+
+    <!-- LEFT SIDE -->
+    <div class="header-left">
+      <h1 class="site-title">John 3:30 Consulting, LLC</h1>
+      <p class="site-tagline">Empowering people through accessible technology</p>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about-owner.html">About the Owner</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="theme-toggle" class="theme-toggle" aria-pressed="false">
+        <span class="theme-icon" aria-hidden="true">🌙</span>
+        <span class="theme-label">Toggle dark mode</span>
+      </button>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <a href="index.html" class="site-logo">
+      <img src="images/john330consultinglogo.png"
+           alt="John 3:30 Consulting logo"
+           class="logo-image">
+    </a>
+
+  </div>
+</header>
+
+  <main id="main-content">
+    <section class="section section-alt">
+      <div class="container">
+        <h2><center>Assistive Technology/Accessibility-related Resources</center></h2>
+        <h3><center>(Courtesy of John 3:30 Consulting, LLC)</center></h3>
+
+         <ul>
+          <li>People who are blind or have low vision, using tools such as screen readers, screen magnifiers, Refreshable Braille displays, larger monitors, and customized display and accessibility settings.</li>
+          <li>Individuals with mobility challenges who benefit from ergonomic keyboards, specialized mice, and speech recognition software.</li>
+          <li>People with hearing differences who need help connecting hearing aids, cochlear implant processors, or Bluetooth accessories to their computers, tablets, smartphones, and televisions.</li>
+          <li>Clients whose hearing aids are too old to connect directly to their devices and who need alternative headset solutions — including over‑ear cushioned headsets, earbud‑style devices, and bone conduction options.</li>
+          <li>Individuals who are deaf and use sign language as their primary language, including support with interpreting solutions.</li>
+          <li>People with hearing challenges who rely on captioning tools.</li>
+          <li>Individuals who struggle to use their own voice and benefit from text‑to‑speech solutions.</li>
+          <li>People with cognitive or neurosensory challenges who use text‑to‑speech and speech‑to‑text tools to communicate and work more effectively.</li>
+        </ul>
+        
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> John 3:30 Consulting, LLC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var yearSpan = document.getElementById('year');
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+  <script>
+  (function () {
+    const toggle = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+    const icon = toggle.querySelector('.theme-icon');
+
+    // Detect system preference
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Load saved preference OR fall back to system preference
+    const savedTheme = localStorage.getItem('theme');
+    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+    if (initialTheme === 'dark') {
+      root.classList.add('dark-mode');
+      toggle.setAttribute('aria-pressed', 'true');
+      icon.textContent = '🌞'; // sun icon for dark mode
+    }
+
+    toggle.addEventListener('click', function () {
+      const isDark = root.classList.toggle('dark-mode');
+      toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      icon.textContent = isDark ? '🌞' : '🌙';
+    });
+  })();
+  </script>
+</body>
+</html>
