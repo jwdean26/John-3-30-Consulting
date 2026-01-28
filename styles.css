@@ -78,11 +78,15 @@ body {
   width: auto;
 }
 
-.emoji-divider {
+.emoji-divider-full {
   text-align: center;
   font-size: 1.5rem;
   margin: 2rem 0;
   opacity: 0.8;
+  letter-spacing: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
 }
 
 /* Header and navigation */
