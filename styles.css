@@ -82,11 +82,11 @@ body {
   height: 30px;
   margin: 2rem 0;
   background: 
-    url("images/logo.png") repeat-x center;
+    url("images/CrossNoBackground.png") repeat-x center;
   -webkit-mask: 
-    linear-gradient(90deg, #000 0 30px, transparent 30px 60px) repeat-x;
+    linear-gradient(90deg, #000 0 30px, transparent 60px 30px) repeat-x;
   mask: 
-    linear-gradient(90deg, #000 0 30px, transparent 30px 60px) repeat-x;
+    linear-gradient(90deg, #000 0 30px, transparent 60px 30px) repeat-x;
   background-size: 60px 30px;
 }
 
