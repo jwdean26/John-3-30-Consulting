@@ -77,6 +77,15 @@ body {
   height: 240px;   /* adjust as needed */
   width: auto;
 }
+
+.repeat-icons {
+  background-image: url("images/john330consultinglogo.png");
+  background-repeat: repeat-x;
+  background-position: center;
+  height: 32px;
+  opacity: 0.7;
+}
+
 /* Header and navigation */
 
 .site-header {
